@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:fillViewport="true">
+        <LinearLayout
+            android:id="@+id/layout7"
+            android:paddingRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="5"
+                android:paddingLeft="10dp"
+                >
+
+                <ImageButton
+                    android:id="@+id/register_LocalAlbum"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/add_picture"
+                    android:paddingLeft="10dp"
+                    android:clickable="true"
+                    />
+
+                <TextView
+                    android:id="@+id/register_title1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="  회원가입"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:layout_weight="3"
+
+                    />
+
+                <Button
+                    android:id="@+id/bt_upload"
+                    android:text="완료"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/preview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_centerHorizontal="true"/> <!--사진 선택시 보이는 곳-->
+
+            <TableLayout
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    android:paddingTop="5dp"
+                    >
+                <TextView
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이디: "
+                    />
+                <EditText
+                    android:id="@+id/register_id"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="아이디를 입력해주세요"
+                    android:textSize="12sp"
+                    />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    android:paddingTop="5dp"
+                    >
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="이름: "
+                        />
+                    <EditText
+                        android:id="@+id/register_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="이름를 입력해주세요"
+                        android:textSize="12sp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    android:paddingTop="5dp"
+                    >
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="비밀번호: "
+                        />
+                    <EditText
+                        android:id="@+id/register_pwd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="비밀번호를 입력해주세요"
+                        android:textSize="12sp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    android:paddingTop="5dp"
+                    >
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="비밀번호 확인: "
+                        />
+                    <EditText
+                        android:id="@+id/register_pwd2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="비밀번호를 입력해주세요"
+                        android:textSize="12sp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    android:paddingTop="5dp"
+                    >
+
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="방 형태"
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/room_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="4"
+                        >
+                        <RadioButton
+                            android:id="@+id/one"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="원룸"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/two"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="투룸"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/three"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="쓰리룸"
+                            />
+                        <RadioButton
+                            android:id="@+id/office"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="오피스텔"
+                            />
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    >
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="주소입력 : "
+                        />
+
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:text="주소입력"
+                        />
+
+                </TableRow>
+
+                <TableRow>
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="입주일: "
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        />
+
+                    <DatePicker
+                        android:id="@+id/start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:spinnersShown="true"
+                        android:datePickerMode="spinner"
+                        android:calendarViewShown="false"
+                        />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:layout_gravity="center_vertical"
+                        android:text="계약만료: "
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        />
+                    <DatePicker
+                        android:id="@+id/end_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="80dp"
+                        android:spinnersShown="true"
+                        android:datePickerMode="spinner"
+                        android:calendarViewShown="false"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    >
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="방 평수: "
+                        />
+                    <EditText
+                        android:id="@+id/register_roomsize"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="평수를 입력해주세요"
+                        android:textSize="12sp"
+                        />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    >
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="층수: "
+                        />
+
+                    <EditText
+                        android:id="@+id/register_floor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="층수를 입력해주세요"
+                        android:textSize="12sp"
+                        />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    >
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="관리비: "
+                        />
+
+                    <EditText
+                        android:id="@+id/register_manageCost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="관리비를 입력해주세요"
+                        android:textSize="12sp"
+                        />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    >
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="난방: "
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/register_heating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        >
+                        <RadioButton
+                            android:id="@+id/register_heatingCenter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="중앙통제"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/register_heatingEach"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="개별난방"
+                            />
+
+                    </RadioGroup>
+
+                </TableRow>
+
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    >
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="엘레베이터 : "
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/register_elevator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        >
+                        <RadioButton
+                            android:id="@+id/register_elevatorOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="있음"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/register_elevatorNo"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="없음"
+                            />
+
+                    </RadioGroup>
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    >
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="베란다/발코니 : "
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/register_veranda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        >
+                        <RadioButton
+                            android:id="@+id/register_verandaOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="있음"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/register_verandaNo"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="없음"
+                            />
+
+                    </RadioGroup>
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    >
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="전세자금대출 : "
+                        />
+
+                    <RadioGroup
+                        android:id="@+id/register_loan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        >
+                        <RadioButton
+                            android:id="@+id/register_loanOk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="가능"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/register_loanNo"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="불가"
+                            />
+
+                    </RadioGroup>
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="10"
+                    >
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="특이사항 : "
+                        />
+
+                    <EditText
+                        android:id="@+id/register_specialmemo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:hint="기타 특이사항을 입력하세요"
+                        android:textSize="12sp"
+                        />
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </FrameLayout>
+</ScrollView>

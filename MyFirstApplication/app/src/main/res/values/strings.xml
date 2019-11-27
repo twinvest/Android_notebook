@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My First Application</string>
+    <string name="kakao_app_key">dfdd1cd494216e64d651ac970f847a99</string>            // Native Values
+    <string name="facebook_app_id">323784505243712</string>
+    <string name="fb_login_protocol_scheme">fb323784505243712</string>
+
+</resources>

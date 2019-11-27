@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="아이디"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="비밀번호"
+        />
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:text="로그인"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="30dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 찾기"
+            android:clickable="true"
+            android:paddingRight="10dp"
+            />
+        <!--<view
+            android:layout_width="1dp"
+            android:layout_height="20dp"/>-->
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이메일로 회원가입"
+            android:clickable="true"
+            android:paddingLeft="10dp"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/signup_naver"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="네이버로 시작하기"
+        android:background="@color/naver"
+        android:textColor="@color/txt_white"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        />
+    <Button
+        android:id="@+id/signup_google"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="구글로 시작하기"
+        android:background="@color/txt_white"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+
+        />
+    <!--<Button
+        android:id="@+id/signup_facebook"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="페이스북으로 시작하기"
+        android:background="@color/facebook"
+        android:textColor="@color/txt_white"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+
+        />-->
+   <!--<Button
+        android:id="@+id/signup_kakao"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="카카오톡으로 시작하기"
+        android:background="@color/kakao"
+        android:textStyle="bold"
+        android:paddingBottom="5dp"
+        />-->
+    <com.kakao.usermgmt.LoginButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/facebook_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp" />
+</LinearLayout>

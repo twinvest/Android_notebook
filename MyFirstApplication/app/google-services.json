@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "871438459875",
+    "firebase_url": "https://sound-bay-240812.firebaseio.com",
+    "project_id": "sound-bay-240812",
+    "storage_bucket": "sound-bay-240812.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871438459875:android:e58dfb8cf1d4559a",
+        "android_client_info": {
+          "package_name": "com.example.myfirstapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871438459875-d5i2kqgiadbuvmevag1us0hs58n5g52o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8YBYsUegs2rX_DA15kDEnQNB8-6Be9DY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871438459875-d5i2kqgiadbuvmevag1us0hs58n5g52o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
